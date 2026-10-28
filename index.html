@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Le Carnet Gourmand : découvrez nos recettes et partagez vos commentaires.">
+
+    <title>Le Carnet Gourmand</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1> 🍲 Le Carnet Gourmand</h1>
+        <p>Avis des lecteurs</p>
+    </header>
+
+    <main>
+        <section class="recette">
+            <h2>Pâtes crémeuses au citron</h2>
+                <p>
+                    Laissez votre avis sur cette recette grâce au formulaire ci-contre.
+                </p>
+
+            <article class="carte-recette">
+                <h4>Ingrédients</h4>
+                
+                <ul>
+                    <li>Pâtes</li>
+                    <li>Crème</li>
+                    <li>Citron</li>
+                    <li>Parmesan</li>
+                </ul>
+
+                <h4>Préparation</h4>
+
+                <ol>
+                    <li>Cuire les pâtes.</li>
+                    <li>Mélanger la crème et le citron.</li>
+                    <li>Ajouter le Parmesan.</li>
+                </ol>
+            </article>
+        </section>
+
+        <section class="commentaires">
+            <h2>Commentaires</h2>
+
+            <form id="form-commentaire">
+                <label for="nom">Votre nom</label>
+                <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    placeholder="Entrez votre nom"
+                    required
+                >
+
+                <label for="commentaire">Votre commentaire</label>
+                <textarea
+                    id="commentaire"
+                    name="commentaire"
+                    placeholder="Donnez votre avis sur la recette..."
+                    rows="5"
+                    required
+                ></textarea>
+
+                <button type="submit">Publier</button>
+
+                <p id="message-erreur" role="alert" aria-live="polite"></p>
+            </form>
+
+            <section id="liste-commentaires" aria-label="Liste des commentaires">
+                <h3>Les avis des lecteurs</h3>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p> Devoir JavaScript - Frontend</p>
+    </footer>
+</body>
+</html>
