@@ -1,0 +1,313 @@
+
+/* ==============================
+   1. STYLE GENERAL
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f6f7fb;
+    color: #111827;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 23px;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 19px;
+}
+
+h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+p {
+    margin-top: 0;
+}
+
+ul,
+ol {
+    padding-left: 22px;
+}
+
+
+/* ==============================
+   2. EN-TETE
+============================== */
+
+header {
+    padding: 24px 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: #6b7280;
+}
+
+
+/* ==============================
+   3. CONTENU PRINCIPAL
+============================== */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+
+/* ==============================
+   4. CARTES PRINCIPALES
+============================== */
+
+.recette,.commentaires {
+    min-width: 0;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+}
+
+
+/* ==============================
+   5. ZONE RECETTE
+============================== */
+
+.carte-recette {
+    padding: 14px;
+    background-color: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.carte-recette h3 {
+    margin-bottom: 12px;
+}
+
+.carte-recette h4 {
+    margin-top: 20px;
+}
+
+.carte-recette li {
+    margin-bottom: 6px;
+}
+
+
+/* ==============================
+   6. FORMULAIRE
+============================== */
+
+#form-commentaire {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,textarea {
+    width: 100%;
+    padding: 10px 12px;
+
+    font: inherit;
+    color: #111827;
+
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,textarea:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+input::placeholder,textarea::placeholder {
+    color: #6b7280;
+}
+
+
+/* ==============================
+   7. BOUTON PUBLIER
+============================== */
+
+button {
+    width: fit-content;
+    padding: 10px 14px;
+
+    font: inherit;
+    font-weight: 600;
+    color: #ffffff;
+
+    background-color: #2563eb;
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: 3px;
+}
+
+
+/* ==============================
+   8. MESSAGE D'ERREUR
+============================== */
+
+#message-erreur {
+    display: none;
+    margin: 0;
+    padding: 10px 12px;
+
+    color: #dc2626;
+    background-color: #fee2e2;
+    border-radius: 10px;
+}
+
+#message-erreur.visible {
+    display: block;
+}
+
+
+/* ==============================
+   9. LISTE DES COMMENTAIRES
+============================== */
+
+#liste-commentaires {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+#liste-commentaires h3 {
+    margin-bottom: 0;
+}
+
+.commentaire {
+    padding: 14px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+
+.commentaire h4 {
+    margin: 0 0 8px;
+}
+
+.commentaire p {
+    margin-bottom: 12px;
+    white-space: pre-wrap;
+}
+
+
+/* ==============================
+   10. BOUTON SUPPRIMER
+============================== */
+
+.btn-supprimer {
+    padding: 6px 10px;
+
+    color: #dc2626;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.btn-supprimer:hover {
+    color: #ffffff;
+    background-color: #dc2626;
+}
+
+
+/* ==============================
+   11. PIED DE PAGE
+============================== */
+
+footer {
+    margin-top: 40px;
+    padding: 20px 16px;
+
+    color: #6b7280;
+    text-align: center;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ==============================
+   12. RESPONSIVE MOBILE
+============================== */
+
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 23px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    main {
+        gap: 16px;
+        padding: 0 12px;
+    }
+
+    .recette,
+    .commentaires {
+        padding: 14px;
+    }
+}
