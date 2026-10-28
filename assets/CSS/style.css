@@ -73,10 +73,10 @@ header p {
 ============================== */
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 24px;
-
     max-width: 1050px;
     margin: 30px auto;
     padding: 0 16px;
@@ -88,7 +88,7 @@ main {
 ============================== */
 
 .recette,.commentaires {
-    min-width: 0;
+    min-width: 150px;
     padding: 16px;
     background-color: #ffffff;
     border: 1px solid #e5e7eb;
@@ -249,7 +249,6 @@ button:focus-visible {
 
 .btn-supprimer {
     padding: 6px 10px;
-
     color: #dc2626;
     background-color: #ffffff;
     border: 1px solid #e5e7eb;
